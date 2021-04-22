@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript">
+          function dis(val){
+            document.getElementById("res").value+=val;
+            console.log(val);
+           }
+          function backspace(){
+              var previous= document.getElementById("res").value;
+              document.getElementById("res").value=previous.substr(0,previous.length-1);
+          }
+          function clr()
+         {
+            document.getElementById("res").value="";
+         }
+           function solve(){
+             var x=document.getElementById("res").value;
+             var y=eval(x);
+             document.getElementById("res").value=y;
+         }
+           function square(){
+        document.getElementById("res").value=Math.pow( document.getElementById("res").value, 2);
+      }
+           function cube(){
+        document.getElementById("res").value=Math.pow( document.getElementById("res").value, 3);
+      }
+           function sqrt2(){
+        document.getElementById("res").value=Math.pow(document.getElementById("res").value, 1/2);
+      }
+      function sqrt3(){
+        document.getElementById("res").value=Math.pow(document.getElementById("res").value, 1/3);
+      }
+      function fnsin(){
+            document.getElementById("res").value=Math.sin(document.getElementById("res").value);
+          }
+          function fncos(){
+            document.getElementById("res").value=Math.cos(document.getElementById("res").value);
+          }
+          function fntan(){
+            document.getElementById("res").value=Math.tan(document.getElementById("res").value);
+          }
+          function mod(){
+        document.getElementById("res").value=Math.abs(document.getElementById("res").value);
+      }
+          function log(){
+            document.getElementById("res").value=Math.log(document.getElementById("res").value);
+          }
+          function factorial(n){
+              if (n==0||n==1){
+                  return 1;
+              }
+              else{
+                  return n*factorial(n-1);
+              }
+          }
+          function myfunction(){
+              var str=document.getElementById("res").value;
+              var res =factorial(str);
+              document.getElementById("res").value=res;
+          }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+       <form name="myform" class="calculator">
+           <input type="text" id="res"><br>
+           <input type="button" class="btn2" value="sin" onclick="fnsin()">
+           <input type="button" class="btn2" value="cos" onclick="fncos()">
+           <input type="button" class="btn2" value="tan" onclick="fntan()">
+           <input type="button" class="btn" value="AC" onclick="clr()">
+           <input type="button" class="btn" value="7" onclick="dis('7')">
+           <input type="button" class="btn" value="8" onclick="dis('8')">
+           <input type="button" class="btn" value="9" onclick="dis('9')">
+           <input type="button" class="btn" value="DEL" onclick="backspace()">
+           <input type="button" class="btn" value="4" onclick="dis('4')">
+           <input type="button" class="btn" value="5" onclick="dis('5')">
+           <input type="button" class="btn" value="6" onclick="dis('6')">
+           <input type="button" class="btn" value="(" onclick="dis('(')">
+           <input type="button" class="btn" value="1" onclick="dis('1')">
+           <input type="button" class="btn" value="2" onclick="dis('2')">
+           <input type="button" class="btn" value="3" onclick="dis('3')">
+           <input type="button" class="btn" value=")" onclick="dis(')')">
+           <input type="button" class="btn" value="." onclick="dis('.')">
+           <input type="button" class="btn" value="0" onclick="dis('0')">
+           <input type="button" class="btn" value="00" onclick="dis('00')">
+           <input type="button" class="btn" value="+" onclick="dis('+')">
+           <input type="button" class="btn" value="-" onclick="dis('-')">
+           <input type="button" class="btn" value="*" onclick="dis('*')">
+           <input type="button" class="btn" value="/" onclick="dis('/')">
+           <input type="button" class="btn" value="^2" onclick="square()">
+           <input type="button" class="btn" value="&#8730;" onclick="sqrt2()">
+           <input type="button" class="btn" value="^3" onclick="cube()">
+           <input type="button" class="btn" value="&#8731;" onclick="sqrt3()">
+           <input type="button" class="btn3" value="| |" onclick="mod()">
+           <input type="button" class="btn3" value="log" onclick="log()">
+           <input type="button" class="btn3" value="!" onclick="myfunction()">
+           <input type="button" class="btn1" value="=" onclick="solve()">
+       </form>
+    </div>
+    </body>
+</html>

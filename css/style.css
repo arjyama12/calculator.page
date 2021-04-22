@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../bkgnd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 3s;
+
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes anime{
+    0%{
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../bkgnd.jpg);
+    }
+    50%{
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../back.jpg);
+    }
+    100%{
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../bg2.jpg);
+    }
+}
+@media only screen and (max-width: 1200px){
+    body{
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+
+    }
+}
+.container{
+    position: relative;
+    background:  linear-gradient(rgb(242, 243, 169), rgba(45, 245, 79, 0.5));
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    border: 2px solid rgb(95, 94, 94);
+    box-shadow: 3px 3px 3px rgb(46, 46, 46);
+    transition: 3s;
+
+    animation-name: cover;
+    animation-duration: 12s;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+@keyframes cover{
+    0%{
+        background-image:  linear-gradient(rgb(242, 243, 169), rgba(45, 245, 79, 0.5));
+    }
+    50%{
+        background-image: linear-gradient(pink, rgb(196, 10, 186));
+    }
+    100%{
+        background-image: linear-gradient(#ffd1b3, #ec7627);
+    }
+}
+@media only screen and (max-width: 1200px){
+    .container{
+        position: absolute;
+        top: 27%;
+        height: 777px;
+        width: 500px;
+    }
+}
+.container .calculator{
+    position: relative;
+    display: grid;
+}
+.container .calculator #res{
+    grid-column: span 4;
+    height: 250px;
+    width: 400px;
+    text-align: right;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    background: transparent;
+    color: rgb(3, 3, 3);
+    border-bottom: 10px;
+    cursor: pointer;
+    font-weight: 750;
+    font-size: 45px;
+}
+.btn2{
+    position: relative;
+    top: -160%;
+    left: -2rem;
+    background: linear-gradient(darkblue, black);
+    border: 2px solid rgb(212, 212, 250);
+    box-shadow: 4px 4px 4px rgb(232, 232, 248);
+    color: pink;
+    font-size: 20px;
+    width: 70px;
+    height: 40px;
+    margin: 5px 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.btn2:hover{
+    background: linear-gradient(red,rgb(247, 120, 98));
+    color: black;
+    border: 2px solid rgb(2, 2, 37);
+    box-shadow: 4px 4px 4px rgb(2, 2, 37);
+    font-weight: 600;
+}
+@media only screen and (max-width: 1200px){
+    .btn2{
+        position: relative;
+        top: 22.5%;
+        left: -34%;
+    }
+}
+.btn{
+    position: relative;
+    top: -160%;
+    left: 6.5%;
+    background: linear-gradient(darkblue, black);
+    border: 2px solid rgb(212, 212, 250);
+    box-shadow: 4px 4px 4px rgb(232, 232, 248);
+    color: pink;
+    font-size: 20px;
+    width: 70px;
+    height: 40px;
+    margin: 5px 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.btn:hover{
+    background: linear-gradient(red,rgb(247, 120, 98));
+    color: black;
+    border: 2px solid rgb(2, 2, 37);
+    box-shadow: 4px 4px 4px rgb(2, 2, 37);
+    font-weight: 600;
+}
+@media only screen and (max-width: 1200px){
+    .btn{
+        position: relative;
+        top: 27%;
+        left: 14.6%;
+    }
+}
+.btn1{
+    position: absolute;
+    left: 19.7%;
+    top: 87.2%;
+    background: linear-gradient(darkblue, black);
+    border: 2px solid rgb(212, 212, 250);
+    box-shadow: 4px 4px 4px rgb(232, 232, 248);
+    color: pink;
+    width: 215px;
+    margin: 25px 15px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 22px;
+}
+.btn1:hover{
+    background: linear-gradient(red,rgb(247, 120, 98));
+    color: black;
+    border: 2px solid rgb(2, 2, 37);
+    box-shadow: 4px 4px 4px rgb(2, 2, 37);
+    font-weight: 600;
+}
+@media only screen and (max-width: 1200px){
+    .btn1{
+        position: absolute;
+        top: 102.7%;
+        left: 26%;
+    }
+}
+.btn3{
+    position: relative;
+    top: -160%;
+    left: 4.1rem;
+    background: linear-gradient(darkblue, black);
+    border: 2px solid rgb(212, 212, 250);
+    box-shadow: 4px 4px 4px rgb(232, 232, 248);
+    color: pink;
+    font-size: 20px;
+    width: 70px;
+    height: 40px;
+    margin: 5px 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.btn3:hover{
+    background: linear-gradient(red,rgb(247, 120, 98));
+    color: black;
+    border: 2px solid rgb(2, 2, 37);
+    box-shadow: 4px 4px 4px rgb(2, 2, 37);
+    font-weight: 600;
+}
+@media only screen and (max-width: 1200px){
+    .btn3{
+        position: relative;
+        top: 46%;
+        left: 70%;
+    }
+}
